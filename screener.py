@@ -60,7 +60,7 @@ def getReturn(ticker):
     strike = list(options['putExpDateMap'][expires].keys())[0]
     bid = options['putExpDateMap'][expires][str(strike)][0]['bid']
 
-    # get rid of iliquid and OTM
+    # get rid of iliquid and ITM
     if bid == 0.0: return 1 
     if float(strike) > float(market): return 1
 
